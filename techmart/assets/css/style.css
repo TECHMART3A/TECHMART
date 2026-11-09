@@ -1,0 +1,935 @@
+/* =====================================
+   TECHMART - GLOBAL STYLE
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f6fa;
+    color: #26364a;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =====================================
+   MAIN LAYOUT
+===================================== */
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* =====================================
+   SIDEBAR
+===================================== */
+
+.sidebar {
+    width: 250px;
+    min-width: 250px;
+    flex-shrink: 0;
+    background: #142d4e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 15px;
+}
+
+.brand {
+    padding: 5px 12px 30px;
+}
+
+.brand h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.brand p {
+    color: #bdcde0;
+    font-size: 11px;
+}
+
+.menu-title {
+    color: #91a9c5;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 10px 12px;
+    letter-spacing: 1px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.sidebar-menu a {
+    color: #dce7f5;
+    padding: 13px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.sidebar-menu a span {
+    margin-right: 10px;
+    font-size: 17px;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    background: #3979c9;
+    color: white;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding: 20px 12px 5px;
+    border-top: 1px solid #38516f;
+}
+
+.sidebar-bottom p {
+    font-size: 12px;
+    color: #bdcde0;
+}
+
+.sidebar-bottom strong {
+    display: block;
+    margin: 6px 0 15px;
+    color: white;
+}
+
+.sidebar-bottom a {
+    color: #ffb9b9;
+    font-size: 13px;
+}
+
+/* =====================================
+   MAIN AREA
+===================================== */
+
+.main-area {
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    background: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.topbar h3 {
+    color: #142d4e;
+    margin-bottom: 5px;
+}
+
+.topbar p {
+    color: #8794a5;
+    font-size: 13px;
+}
+
+.admin-label {
+    background: #e7eef7;
+    color: #245b9d;
+    padding: 9px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+main {
+    padding: 30px;
+    min-height: 65vh;
+    min-width: 0;
+    flex: 1;
+}
+
+/* =====================================
+   JUDUL HALAMAN ADMIN
+===================================== */
+
+main h1,
+main h2,
+main h3 {
+    color: #142d4e;
+}
+
+main h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+main h3 {
+    margin-bottom: 15px;
+}
+
+/* Judul dan tulisan di dashboard */
+.dashboard-heading h2 {
+    color: #142d4e;
+    margin-bottom: 7px;
+}
+
+.dashboard-heading p {
+    color: #8491a2;
+    font-size: 14px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+button,
+.btn {
+    background: #3979c9;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+}
+
+button:hover,
+.btn:hover {
+    background: #245b9d;
+}
+
+.btn-add {
+    display: inline-block;
+    background: #3979c9;
+    color: white;
+    padding: 11px 17px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.btn-add:hover {
+    background: #245b9d;
+}
+
+/* =====================================
+   TABLE
+===================================== */
+
+.table-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    margin-top: 15px;
+    background: white;
+    border-radius: 9px;
+    box-shadow: 0 2px 10px rgba(20,45,78,0.06);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th {
+    background: #e7eef7;
+    color: #142d4e;
+    text-align: left;
+    padding: 13px;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #edf0f5;
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+tr:hover td {
+    background: #f8fbff;
+}
+
+/* =====================================
+   ACTION BUTTONS
+===================================== */
+
+table th:last-child,
+table td:last-child {
+    min-width: 145px;
+    white-space: nowrap;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 8px;
+}
+
+.action-buttons a {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.btn-edit {
+    background: #198754;
+    color: white !important;
+}
+
+.btn-edit:hover {
+    background: #146c43;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: white !important;
+}
+
+.btn-delete:hover {
+    background: #b02a37;
+}
+
+/* =====================================
+   FORMS
+===================================== */
+
+form {
+    margin-top: 15px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 7px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 11px 12px;
+    border: 1px solid #d5deea;
+    border-radius: 7px;
+    font-size: 14px;
+    background: white;
+    margin-bottom: 12px;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #3979c9;
+    box-shadow: 0 0 0 3px rgba(57,121,201,0.12);
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+/* =====================================
+   DASHBOARD
+===================================== */
+
+.dashboard-heading {
+    margin-bottom: 20px;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 11px;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 10px rgba(20,45,78,0.05);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #e7eef7;
+    color: #3979c9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.stat-card p {
+    color: #8491a2;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.stat-card h2 {
+    color: #142d4e;
+    margin: 0;
+    font-size: 25px;
+}
+
+.welcome-box {
+    background: linear-gradient(120deg, #245b9d, #3979c9);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.welcome-box h3 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.welcome-box p {
+    color: #e2edfa;
+    font-size: 14px;
+}
+
+.dashboard-section {
+    background: white;
+    padding: 23px;
+    border-radius: 11px;
+    box-shadow: 0 2px 10px rgba(20,45,78,0.05);
+}
+
+.dashboard-section h3 {
+    color: #142d4e;
+    margin-bottom: 7px;
+}
+
+.dashboard-section > p {
+    color: #8491a2;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.status-warning {
+    background: #fff0d8;
+    color: #a66a00;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.empty-data {
+    text-align: center;
+    color: #8491a2;
+    padding: 25px;
+}
+
+.status-safe {
+    color: #16834a;
+    font-weight: 600;
+}
+
+.cancelled-label {
+    color: #777;
+    font-size: 13px;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    background: #142d4e;
+    color: #d8e4f2;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    margin-top: auto;
+}
+
+/* =====================================
+   UKURAN TABEL
+===================================== */
+
+.product-table {
+    min-width: 1100px;
+}
+
+.category-table {
+    min-width: 750px;
+}
+
+.supplier-table {
+    min-width: 900px;
+}
+
+.transaction-table {
+    min-width: 1150px;
+}
+
+/* =====================================
+   FORM PEMBATALAN
+===================================== */
+
+.cancel-form {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.btn-cancel {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 9px 13px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.btn-cancel:hover {
+    background: #b02a37;
+}
+
+/* =====================================
+   FOTO PRODUK TECHMART
+===================================== */
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.product-image-placeholder {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef2f7;
+    color: #7b8794;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* =====================================
+   RESPONSIVE TABLET
+===================================== */
+
+@media screen and (max-width: 1100px) {
+    .dashboard-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .sidebar {
+        width: 210px;
+        min-width: 210px;
+    }
+
+    main {
+        padding: 20px;
+    }
+}
+
+/* =====================================
+   RESPONSIVE HP
+===================================== */
+
+.menu-toggle {
+    display: none;
+}
+
+.sidebar-overlay {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .app-container {
+        display: block;
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 270px;
+        min-width: 0;
+        height: 100vh;
+        z-index: 1001;
+        overflow-y: auto;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+    .sidebar-overlay.show {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        z-index: 1000;
+    }
+
+    .menu-toggle {
+        display: block;
+        flex-shrink: 0;
+        width: 42px;
+        height: 42px;
+        background: #3979c9;
+        color: white;
+        border: none;
+        border-radius: 7px;
+        font-size: 23px;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .topbar {
+        padding: 13px;
+        gap: 12px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .topbar > div:first-of-type {
+        flex: 1;
+        min-width: 150px;
+    }
+
+    .topbar h3 {
+        font-size: 16px;
+    }
+
+    .admin-label {
+        padding: 8px 10px;
+    }
+
+    .main-area {
+        width: 100%;
+        min-width: 0;
+        min-height: 100vh;
+    }
+
+    main {
+        width: 100%;
+        min-width: 0;
+        padding: 16px;
+    }
+
+    main h2 {
+        font-size: 21px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 13px;
+        gap: 8px;
+    }
+
+    .table-container {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .table-container table {
+        width: max-content;
+    }
+
+    input,
+    select,
+    textarea {
+        max-width: 100%;
+    }
+
+    .action-buttons {
+        flex-wrap: nowrap;
+    }
+
+    footer {
+        width: 100%;
+        margin-top: auto;
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+/* =====================================
+   HP KECIL
+===================================== */
+
+@media screen and (max-width: 480px) {
+
+    .sidebar {
+        padding: 12px;
+    }
+
+    .sidebar-menu {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sidebar-menu a {
+        font-size: 12px;
+        padding: 9px 7px;
+    }
+
+    .sidebar-bottom strong {
+        font-size: 14px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-box {
+        padding: 18px;
+    }
+
+    .dashboard-section {
+        padding: 15px;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    .topbar {
+        padding: 12px;
+    }
+
+    .admin-label {
+        font-size: 12px;
+    }
+
+    .action-buttons {
+        flex-wrap: nowrap;
+    }
+}
+
+/* =====================================
+   LOGIN PAGE TECHMART
+===================================== */
+
+.login-page {
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e8f0fa, #dce7f5);
+    overflow-x: hidden;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 430px;
+    margin: auto;
+}
+
+.login-card {
+    background: #ffffff;
+    padding: 40px 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(20, 45, 78, 0.12);
+}
+
+.login-logo {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.logo-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #142d4e;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 14px;
+}
+
+.login-logo h1 {
+    margin: 0;
+    color: #142d4e;
+    font-size: 27px;
+    letter-spacing: 1px;
+}
+
+.login-logo p {
+    margin-top: 7px;
+    color: #7b8999;
+    font-size: 13px;
+}
+
+.login-heading {
+    margin-bottom: 25px;
+}
+
+.login-heading h2 {
+    margin-bottom: 8px;
+    color: #142d4e;
+    font-size: 22px;
+}
+
+.login-heading p {
+    color: #7b8999;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.login-form-group {
+    margin-bottom: 20px;
+}
+
+.login-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #26364a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.login-form-group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    border: 1px solid #d8e0ea;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: #f9fbfd;
+}
+
+.login-form-group input:focus {
+    border-color: #3979c9;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(57, 121, 201, 0.12);
+}
+
+.login-button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 8px;
+    background: #3979c9;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-button:hover {
+    background: #285fa5;
+}
+
+.login-error {
+    padding: 12px;
+    margin-bottom: 18px;
+    background: #fde8e8;
+    color: #c0392b;
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+.login-footer {
+    margin-top: 30px;
+    padding-top: 18px;
+    border-top: 1px solid #edf0f4;
+    text-align: center;
+    color: #98a3b1;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 480px) {
+
+    .login-page {
+        padding: 15px;
+    }
+
+    .login-card {
+        padding: 30px 22px;
+    }
+
+    .login-logo h1 {
+        font-size: 24px;
+    }
+}
+/* MEMPERBAIKI WARNA TULISAN HALAMAN UTAMA */
+
+.hero h1 {
+    color: white !important;
+}
+
+.hero p {
+    color: white !important;
+}
+
+.hero {
+    color: white;
+}
